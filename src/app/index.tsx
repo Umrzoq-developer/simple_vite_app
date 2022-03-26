@@ -1,17 +1,15 @@
-import Routings from '../views';
 import './App.css';
+
+import {withHocs} from './providers';
+import Routings from '../views';
 import styles from './index.module.scss';
 
 const App = () => {
     return (
         <div className={styles.container}>
-            <Routings name="umrzoq" />
-            <div className="w-full flex flex-col justify-center items-center h-screen bg-black">
-                <h1 className="text-blue-900">HELLO, I'M A REACT DEVELOPER!</h1>
-                <p className="text-white">- Toshkentov Umrzoq</p>
-            </div>
+            <Routings />
         </div>
     );
 };
 
-export default App;
+export default withHocs(App);
